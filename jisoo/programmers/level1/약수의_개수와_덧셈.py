@@ -5,7 +5,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/77884
 
 def counting(i):
     count = 0
-    for x in range(1, i + 1):
+    for x in range(1, i + 1): #절반 숫자 넘어가는 수는 어차피 안되서 확인할 필요없음
         if i % x == 0:
             count += 1
     return count
