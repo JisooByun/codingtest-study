@@ -21,19 +21,17 @@ def solution(board, moves):
     #
     if len(stack) != 0 and stack[-1] == pick:
       stack.pop()
-      answer += 1
+      answer += 2
     else:
       stack.append(pick)
 
-  return answer * 2
+  return answer
 
 
 """
 더 나은 풀이
 우선 stack에 넣은뒤에 맨 위쪽 2개를 보고 지울지 판별
 """
-
-
 def solution2(board, moves):
   answer = 0
   stack = []

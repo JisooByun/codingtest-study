@@ -3,8 +3,9 @@ https://school.programmers.co.kr/learn/courses/30/lessons/67256
 """
 
 
-def getDistance(a, b):
+def getDistance(a, b): #a 다음 누를 위치, b 손가락 위치 a = (1,1) b = (2,0)
   return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
 
 
 def solution(numbers, hand):
@@ -32,7 +33,7 @@ def solution(numbers, hand):
       answer += 'L'
       lp = i
     if i in C:
-      rd = getDistance(keypad[i], keypad[rp])
+      rd = getDistance(keypad[i], keypad[rp]) # i: 5 rp: 3
       ld = getDistance(keypad[i], keypad[lp])
 
       if rd > ld:  # 양수면 R이 더큰것 L로 누름
