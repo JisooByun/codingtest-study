@@ -10,12 +10,13 @@ def solution(n, lost, reserve):
   new_lost.sort()
   new_reserve.sort()
 
-  for i in new_lost[:]:
-    if i - 1 in new_reserve:
-      new_lost.remove(i)
-      new_reserve.remove(i - 1)
-    elif i + 1 in new_reserve:
-      new_lost.remove(i)
-      new_reserve.remove(i + 1)
 
+
+  for i in new_lost:
+    if i-1 in new_reserve:
+      new_reserve.remove(i-1)
+    elif i+1 in new_reserve:
+      new_reserve.remove(i+1)
+    else:
+      answer +=1
   return n - len(new_lost)
