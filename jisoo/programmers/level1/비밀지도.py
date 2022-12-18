@@ -37,7 +37,7 @@ def solution(n, arr1, arr2):
     # 비트 연산자를 이용한뒤에 bin()으로 2진수로 변환
     a12 = str(bin(i|j)[2:])
     print(a12)
-    # rjust는 길이가 n이 될때까지 오른쪽에 0을 채워넣는것이다.
+    # rjust는 길이가 n이 될때까지 오른쪽에 0을 채워넣는것이다. ljust, zfill이 있음
     a12=a12.rjust(n,'0')
     a12=a12.replace('1','#')
     a12=a12.replace('0',' ')
