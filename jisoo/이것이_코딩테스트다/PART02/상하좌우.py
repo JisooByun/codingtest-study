@@ -20,17 +20,17 @@ def solution(n, k):
 
   for d in k:
     dx, dy = con[d]
-    nx = x+dx
-    ny = y+dy
-    print(nx,ny)
-    if nx >= 0 and nx <n and ny >=0 and ny <n:
+    nx = x + dx
+    ny = y + dy
+    print(nx, ny)
+    if nx >= 0 and nx < n and ny >= 0 and ny < n:
       x = nx
       y = ny
 
-  return [x+1,y+1]
+  return [x + 1, y + 1]
 
 
 class Test(unittest.TestCase):
   def testAdd(self):
     result = solution(5, ['R', 'R', 'R', 'U', 'D', 'D'])
-    self.assertEqual([3,4], result)
+    self.assertEqual([3, 4], result)
