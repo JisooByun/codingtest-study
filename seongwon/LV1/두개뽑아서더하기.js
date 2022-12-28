@@ -1,3 +1,5 @@
+
+
 function solution(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i++) {
@@ -8,3 +10,5 @@ function solution(numbers) {
   return Array.from(new Set(result)).sort((a, b) => a - b);
 }
 console.log(solution([5, 0, 2, 7]));
+
+
